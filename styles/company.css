@@ -1,0 +1,112 @@
+/* company.css */
+#wrap main {
+    text-align:center;
+    /* 부모선택자에서 상속시킨 속성이 자식, 자손에 들어있지 않을경우는 그대로 상속되고 자식, 자손에 동일한 속성이 있다면 상속을 무시하고 자기 자신에 들어있는 속성값만 인식한다. */
+}
+#wrap main .path {
+    background-color:#fcfcfc;
+    padding:12px 60px 12px 0;
+    text-align:right;
+    font-family:pretendard;
+    color:#000;
+    font-size:16px;
+    font-weight:600;
+    /* 모바일~태블릿까지 반응하는 반응형웹 제작이 아닌 pc에만 적응하는 웹을 제작하는 경우는 너비값을 pc의 표준값인 192px에 맞춰서 피그마와 포토샵을 디자인한다. 디자인 후 css 작업을 진행 시에는 1920px은 pc너비 100%를 채운다는 개념과 같으므로 별도의  1920px을 입력하지 않고 입력하는 선택자 요소의 특징이 블록인지 인라인인지를 구분하고 블록이라면 너비가 기본 100% 설정이기 때문에 pc의 w100%를 채운다 이해하고 따로 너비값을 입력하지 않는다. 높이도 마찬가지(피그마는 Hug는 기본값 내용에 맞추기와 뜻이 같다) */
+}
+#wrap main .path a {}
+#wrap main .path img {}
+#wrap main .path em {}
+#wrap main h1 {
+    margin:80px 0 20px;
+    font-size:60px;
+    font-weight:700;
+}
+#wrap main > p {
+    margin:0 0 80px;
+    font-size:18px;
+    line-height:150%;
+}
+#wrap main .bg {
+    background-color:#fcfcfc;
+    padding:80px 0;
+}
+#wrap main .bg h2 {
+    border-top:1px solid #f1f1f1;
+    padding-top:40px;
+    margin-bottom:40px;
+    font-size:1.125rem;
+    font-weight:600;
+    line-height:1.5;
+    color:#36b4e5;
+    /* HTML작성 시 영어는 소문자로 표시하고 CSS로 클라이언트의 요청사항에 따라 대소문자를 디자인 해야 한다. */
+    text-transform:uppercase;
+}
+#wrap main .bg p {
+    margin-bottom:40px;
+    font-family:pretendard;
+    font-size:1.125rem;
+    line-height:1.5;
+}
+#wrap main .bg h2+p {
+    font-size:2.125rem;
+    letter-spacing:-2%;
+    font-family:pretendard;
+}
+#wrap main .bg .goal_contents {
+    margin-bottom:40px;
+}
+#wrap main .bg .goal_contents li {
+    width:250px; height:250px;
+    display:inline-block;
+    border-radius:50%;
+    margin-left:-20px;
+    /* box-shadow:x값 y값 blur값 색상 */
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    padding-top:79px;
+}
+#wrap main .bg .goal_contents li:nth-child(1) {
+    background-color:#36b4e5;
+}
+#wrap main .bg .goal_contents li:nth-child(2) {
+    background-color:#ffffff;
+}
+#wrap main .bg .goal_contents li:nth-child(3) {
+    background-color:#f3c300;
+}
+#wrap main .bg .goal_contents li * {display:block;}
+#wrap main .bg .goal_contents li img {
+    width:50px;
+    margin:0 auto 20px;
+    /* 부모보다 작은 블록 요소를 가운데 정렬하고 싶을 때 margin 좌우 auto */
+    filter:invert(100%);
+}
+#wrap main .bg .goal_contents li:nth-child(2) img {filter:invert(0);}
+#wrap main .bg .goal_contents li span {
+    color:#fff; 
+    font-size:22px;
+    font-weight:600;
+    font-family:pretendard;
+}
+#wrap main .bg .goal_contents li:nth-child(2) span {
+    color:#000;
+}
+#wrap main .bg .strategy_contents {
+    background-color:yellow;
+}
+#wrap main .bg .strategy_contents dl {
+    background-color:#f1f1f1;
+    width:180px; height:180px;
+    border-radius:90px;
+    display:inline-block;
+    margin-left:-10px;
+    padding-top:44.5px;
+}
+#wrap main .bg .strategy_contents dl dt {
+    text-decoration:underline;
+    /* text-decoration:line-through; */
+    text-transform:capitalize;
+    margin-bottom:10px;
+    font-weight:600;
+    font-size:1.125rem;
+}
+#wrap main .bg .strategy_contents dl dd {}
