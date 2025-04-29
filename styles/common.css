@@ -1,35 +1,89 @@
 /* index, 모든 sub 적용할 공통 header, footer common.css */
 #wrap {}
-#wrap header {}
-#wrap header h1 {}
+#wrap header {
+    background-color:aqua;
+    height:92px;
+    padding:0 60px;
+    /* container(header) item(h1, nav, right_menu) */
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
+}
+#wrap header h1 {
+    
+}
 #wrap header h1 a {}
 #wrap header h1 a img {}
-#wrap header nav {}
-#wrap header nav .gnb {}
-#wrap header nav .gnb li {}
+#wrap header nav {
+    background-color:lime;
+    height:92px;
+}
+#wrap header nav .gnb {
+    /* container(.gnb) item(li) */
+    display:flex; flex-flow:row nowrap;
+}
+#wrap header nav .gnb li {margin-right:60px;}
+#wrap header nav .gnb li:last-child {margin-right:0;}
 #wrap header nav .gnb li a {
+    border:1px solid red;
     font-weight:600;
     font-size:1.16rem;
     letter-spacing:-0.02rem;
     text-align:left;
+    height:92px; display:block; line-height:92px;;
 }
-#wrap header .right_menu {}
-#wrap header .right_menu li {}
+#wrap header .right_menu {
+    background-color:yellow;
+    display:flex; flex-flow:row nowrap;
+}
+#wrap header .right_menu li {margin-left:30px;}
+#wrap header .right_menu li:first-child {
+    margin-left:0;
+    display:flex; flex-flow:row nowrap;
+    align-items:center;
+}
+/* 포토샵, 피그마에서 디자인한 구분선 디자인은 CSS에서 가상선택자 after 또는 before를 이용하여 면으로 변경하여 디자인한다. */
+#wrap header .right_menu li:first-child::after {
+    content:''; display:inline-block;
+    width:1px; height:20px;
+    background-color:#000;
+    margin-left:30px;
+}
+#wrap header .right_menu li:first-child a {
+    line-height:24px;
+}
 #wrap header .right_menu li a {
     font-size:0.75rem;
-    letter-spacing:-0.02em;
+    letter-spacing:-0;
 }
 #wrap header .right_menu li a img {}
 /* =============================footer */
+#wrap .footer_full_w {
+    width:100%;
+    padding:50px 60px;
+}
 #wrap footer {
+    background-color:aqua;
+    width:1280px; margin:0 auto;
+    padding:50px 0;
 }
-#wrap footer .top {}
-#wrap footer .top .left {}
+#wrap footer .top {
+    background-color:lime;
+    margin-bottom:12px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+#wrap footer .top .left {
+    background-color:orange;
+    display:flex; flex-flow:row nowrap;
+    align-items:center;
+}
 #wrap footer .top .left a {
-    font-size:16px;
-    letter-spacing:-0.02em;
-    font-weight:600;
+    margin-right:51px;
 }
+#wrap footer .top .left a:last-child {margin-right;}
 #wrap footer .top .left a:nth-child(1) {
     font-weight:600;
     color:#138FBF;
@@ -39,22 +93,43 @@
     color:#DA2128;
 }
 #wrap footer .top .right .left a img {}
-#wrap footer .top .right {}
+#wrap footer .top .right {
+    background-color:yellow;
+    display:flex; flex-flow:row nowrap;
+    align-items:center;
+}
 /* =======================footer 패밀리사이트+사이트맵 공통 */
 #wrap footer .top .right .site {
     font-size:0.75rem;
     border:1px solid #eee;
     padding:7px 10px;
     letter-spacing:0.02em;
+    height:38px;
+}
+#wrap footer .top .right select {
+    width:197px; outline:none;
+    background:#fff url(../images/errow.png) no-repeat 96% center;
 }
 #wrap footer .top .right select option {}
-#wrap footer .top .right .site_map {}
-#wrap footer .top .right .site_map span {}
+#wrap footer .top .right .site_map {
+    background:#fff;
+    width:135px;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
+    margin-left:20px;
+}
+#wrap footer .top .right .site_map span {
+    
+}
 #wrap footer .top .right .site_map img {}
 #wrap footer .bottom * {
-    font-size:16px;
+    margin-bottom:50px;
     letter-spacing:-0.02em;
     color:#808080;
+    /* font-size:0.875rem;
+    line-height:1.5;
+    color:#808080; */
 }
 #wrap footer .bottom address {
     /* font-size:16px;
